@@ -1,15 +1,12 @@
-import logo from './logo.svg'
 import './App.css'
-import ResponsiveComponent from './components/ResponsiveComponent'
+import ResponsiveComponent from './components/ResponsiveComponent';
+import CustomComponent from './components/CustomComponent';
 
 function App () {
   return (
     <ResponsiveComponent>
       <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>This is a responsive React page.</p>
-        </header>
+        <CustomComponent/>
       </div>
     </ResponsiveComponent>
   )
