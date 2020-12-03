@@ -10,8 +10,8 @@ const style = {
 }
 
 const ResponsiveComponent = ({ children }) => {
-//   const size = useWindowSize();
-  const { size } = useViewport();
+  const size = useWindowSize();
+//   const { size } = useViewport();
 
   const component = size === "mobile" ? 
     <MobileComponent>{children}</MobileComponent> : <DesktopComponent>{children}</DesktopComponent>;
