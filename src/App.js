@@ -8,7 +8,7 @@ import CustomComponent from './components/CustomComponent'
 //       <CustomComponent />
 //     </ResponsiveComponent>
 //   )
-// }
+// };
 
 function App () {
   return (
@@ -18,6 +18,6 @@ function App () {
       </ResponsiveComponent>
     </ViewportProvider>
   )
-}
+};
 
-export default App
+export default App;
