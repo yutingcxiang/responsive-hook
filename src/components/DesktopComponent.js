@@ -4,7 +4,6 @@ const childStyle = {
     backgroundColor: 'black',
     color: 'white',
     fontSize: '20px',
-    display: "flex",
 }
 
 const headerStyle = {

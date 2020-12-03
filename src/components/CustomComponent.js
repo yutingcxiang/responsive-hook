@@ -8,15 +8,16 @@ const componentStyle = {
 }
 
 const logoStyle = {
-  height: '200px',
-  display: "inline"
+  margin: "0 auto",
+  height: '255px',
+  display: "block"
 }
 
-const CustomComponent = ({ style }) => {
+const CustomComponent = ( style ) => {
+    React.useEffect(() => console.log(style))
   return (
     <div className='container' style={{ ...componentStyle, ...style }}>
-      <img src={logo} className='App-logo-1' alt='logo' style={logoStyle} />
-      <img src={logo} className='App-logo-1' alt='logo' style={logoStyle} />
+      <img src={logo} className='logo' alt='logo' style={logoStyle} />
       <p>This is a responsive React page.</p>
     </div>
   )

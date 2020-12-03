@@ -4,13 +4,19 @@ import { useState, useEffect } from 'react';
 export function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowSize, setWindowSize] = useState(undefined);
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
 
   useEffect(() => {
     // Handler to call on window resize
     function handleResize() {
       // Set window width/height to state
-      setWindowSize(getBreakPoint(window.innerWidth));
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
     }
     
     // Add event listener
@@ -23,22 +29,6 @@ export function useWindowSize() {
     return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount
 
-  return windowSize;
+  return windowSize.width <= 767 ? "mobile" : "desktop";
 };
 
-//a Util function that will conver the absolute width into breakpoints
-function getBreakPoint(windowWidth) {
-    if (windowWidth) {
-      if (windowWidth < 768) {
-        return "xs";
-      } else if (windowWidth < 1024) {
-        return "sm";
-      } else if (windowWidth < 1200) {
-        return "med";
-      } else {
-        return "lg";
-      }
-    } else {
-      return undefined;
-    }
-  }
