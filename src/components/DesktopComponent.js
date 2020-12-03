@@ -4,6 +4,7 @@ const childStyle = {
     backgroundColor: 'black',
     color: 'white',
     fontSize: '20px',
+    display: "flex",
 }
 
 const headerStyle = {
@@ -11,10 +12,10 @@ const headerStyle = {
 }
 
 const DesktopComponent = ({ children }) => (
-    <div>
+    <>
         <h1 style={headerStyle}>Desktop View</h1>
         <div style={childStyle}>{children}</div>
-    </div>
+    </>
 );
 
 export default DesktopComponent;

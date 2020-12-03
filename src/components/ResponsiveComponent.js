@@ -4,7 +4,10 @@ import MobileComponent from './MobileComponent';
 import DesktopComponent from './DesktopComponent';
 
 const style = {
-    textAlign: 'center'
+    textAlign: 'center',
+    height: "100%",
+    display: "flex",
+    flexDirection: "column"
 }
 
 const ResponsiveComponent = ({ children }) => {
